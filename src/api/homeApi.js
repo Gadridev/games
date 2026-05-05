@@ -12,7 +12,7 @@ export const fetchTrendingGames = async () => {
 
 export const fetchTopRatedGames = async () => {
   const res = await axios.get(
-    `${BASE_URL}/games?key=${API_KEY}&ordering=-metacritic&page_size=3`
+    `${BASE_URL}/games?key=${API_KEY}&ordering=-metacritic&page_size=10`
   );
   return res.data.results;
 };

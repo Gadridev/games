@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Games from './pages/Games'
 import GameDetail from './pages/GameDetail'
@@ -7,16 +7,15 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
-      <div className="app-content">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/games/:game_id" element={<GameDetail />} />
-          <Route path="/games/:game_id/developers-team" element={<GameDevelopers />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="app-content">
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/games/:game_id" element={<GameDetail />} />
+        <Route path="/games/:game_id/developers-team" element={<GameDevelopers />} />
+      </Routes>
+    </div>
   )
 }
 
