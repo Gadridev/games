@@ -220,3 +220,28 @@
     min-height: 280px;
   }
 }
+.spotlight-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow-line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+}
+.rule {
+  height: 1px;
+  background: var(--gold);
+  width: 100%;
+}
+.eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  text-transform: uppercase;
+  width: 150px;
+}

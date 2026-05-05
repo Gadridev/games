@@ -3,13 +3,14 @@ import "../trendingStyle.css"
 function GameCard({ game, index }) {
   const isFeatured = index === 0;
   const rank = String(index + 1).padStart(2, "0");
-
+  
   const tags = game.tags
     ? game.tags.slice(0, 3).map((t) => t.name.toUpperCase())
     : [];
 
   const genre = game.genres?.[0]?.name || "Game";
 
+  console.log(isFeatured,game.genres[0])
   return (
     <div className={`game-card ${isFeatured ? "game-card--featured" : ""}`}>
       <img

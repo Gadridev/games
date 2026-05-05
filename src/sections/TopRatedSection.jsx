@@ -1,12 +1,9 @@
 import GameCard from "../components/GameCardTest";
-
+import "../styles/Games.css"
 const TopRatedSection = ({ games }) => {
- 
-
-
   return (
     <div style={{ padding: '0 32px' }}>
-      <div className="ruled-header" style={{ marginTop: '80px', marginBottom: '36px' }}>
+      <div className="ruled-header" style={{ marginTop: '80px' }}>
         <div className="sec-label">TOP RATED</div>
         <div className="rule"></div>
       </div>

@@ -45,6 +45,7 @@ export default function Spotlight({ games }) {
       <div className="spotlight-eyebrow">
         <span className="eyebrow-line" />
         <span className="eyebrow-text">{label}</span>
+         <div className="rule"></div>
       </div>
 
       <div className="spotlight-card">
