@@ -1,4 +1,4 @@
-import "../trendingStyle.css"
+import "../styles/trendingStyle.css"
 
 function GameCard({ game, index }) {
   const isFeatured = index === 0;
