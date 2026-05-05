@@ -4,6 +4,7 @@ import "../styles/spotlight.css";
 export default function Spotlight({ games }) {
   const [hovered, setHovered] = useState(false);
   const label = "SPOTLIGHT";
+
   const game = {
     badge:
       games.rating >= 4
@@ -22,7 +23,6 @@ export default function Spotlight({ games }) {
   const creator = {
     sectionLabel: "GAME DETAILS",
     name: `${games.playtime || "N/A"}h average playtime`,
-
     role: game.genre,
     company:
       games.parent_platforms
@@ -31,7 +31,7 @@ export default function Spotlight({ games }) {
 
     bio:
       games.description_raw
-        ?.replace(/<[^>]+>/g, "") 
+        ?.replace(/<[^>]+>/g, "")
         .slice(0, 140) + "..." || "No description available",
 
     avatar:
