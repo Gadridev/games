@@ -1,9 +1,8 @@
 import GameCard from "../components/GameCardTest";
-import "../styles/Games.css"
 
 const TopRatedSection = ({ games }) => {
  
-console.log(games)
+
 
   return (
     <div style={{ padding: '0 32px' }}>

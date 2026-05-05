@@ -51,7 +51,10 @@
   }
 }
 
+<<<<<<< HEAD
 /* ── Section eyebrow ────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .spotlight-eyebrow {
   display: flex;
   align-items: center;
@@ -73,7 +76,10 @@
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 /* ── Main card ──────────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .spotlight-card {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -84,7 +90,10 @@
   animation: fadeUp 0.7s 0.1s ease both;
 }
 
+<<<<<<< HEAD
 /* ── Game hero (left) ───────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .game-hero {
   position: relative;
   overflow: hidden;
@@ -127,7 +136,10 @@
   gap: 12px;
 }
 
+<<<<<<< HEAD
 /* ── Game badge ─────────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .game-badge {
   display: flex;
   align-items: center;
@@ -147,7 +159,10 @@
   flex-shrink: 0;
 }
 
+<<<<<<< HEAD
 /* ── Game title ─────────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .game-title {
   font-family: var(--font-display);
   font-size: clamp(36px, 5vw, 56px);
@@ -159,7 +174,10 @@
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
 }
 
+<<<<<<< HEAD
 /* ── Game meta ──────────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .game-meta {
   display: flex;
   align-items: center;
@@ -184,7 +202,10 @@
   color: var(--text-secondary);
 }
 
+<<<<<<< HEAD
 /* ── Creator panel (right) ──────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .creator-panel {
   background: var(--bg-panel);
   border-left: 1px solid var(--bg-panel-border);
@@ -206,7 +227,10 @@
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 /* ── Avatar ─────────────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .creator-avatar-wrap {
   width: 72px;
   height: 72px;
@@ -229,7 +253,10 @@
   filter: grayscale(20%);
 }
 
+<<<<<<< HEAD
 /* ── Creator info ───────────────────────────────────── */
+=======
+>>>>>>> 9e3649d (resolve merge conflict)
 .creator-name {
   font-family: var(--font-display);
   font-size: 28px;
