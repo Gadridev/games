@@ -11,6 +11,7 @@ import TrendingSection from "../sections/TrendingSection";
 
 import SpotlightSection from "../sections/SpotlightSection";
 import TopRatedSection from "../sections/TopRatedSection";
+import Loader from "../components/Loader";
 
 function HomePage() {
   const [trending, setTrending] = useState([]);
@@ -37,7 +38,7 @@ function HomePage() {
   }, []);
 
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader/>;
   
 
   return (
