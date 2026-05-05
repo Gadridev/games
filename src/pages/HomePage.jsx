@@ -40,7 +40,7 @@ function HomePage() {
 
   return (
     <>
-      <HeroSection />
+      <HeroSection game={topRated[0]} />
       <TrendingSection games={trending} />
       <TopRatedSection games={topRated} />
       <SpotlightSection game={spotlight} />
