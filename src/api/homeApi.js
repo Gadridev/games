@@ -19,7 +19,7 @@ export const fetchTopRatedGames = async () => {
 
 export const fetchSpotlightGame = async () => {
   const res = await axios.get(
-    `${BASE_URL}/games/3498?key=${API_KEY}` 
+    `${BASE_URL}/games/3497?key=${API_KEY}` 
   );
   return res.data;
 };

@@ -8,8 +8,9 @@ import {
 
 import HeroSection from "../sections/HeroSection";
 import TrendingSection from "../sections/TrendingSection";
-import TopRatedSection from "../sections/TopRatedSection";
+
 import SpotlightSection from "../sections/SpotlightSection";
+import TopRatedSection from "../sections/TopRatedSection";
 
 function HomePage() {
   const [trending, setTrending] = useState([]);
@@ -17,6 +18,7 @@ function HomePage() {
   const [spotlight, setSpotlight] = useState(null);
 
   const [loading, setLoading] = useState(true);
+  console.log(topRated)
 
   useEffect(() => {
     async function loadData() {
@@ -43,7 +45,7 @@ function HomePage() {
       <HeroSection game={topRated[0]} />
       <TrendingSection games={trending} />
       <TopRatedSection games={topRated} />
-      <SpotlightSection game={spotlight} />
+      <SpotlightSection games={spotlight} />
     </>
   );
 }
