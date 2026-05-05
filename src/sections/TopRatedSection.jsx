@@ -1,8 +1,7 @@
-function TopRatedSection({top}) {
-    console.log(top)
+function TopRatedSection() {
     return (
         <div>
-           just for testing 
+            
         </div>
     )
 }
