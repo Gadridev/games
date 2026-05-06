@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Games from './pages/Games'
+
 import GameDetail from './pages/GameDetail'
 import './App.css'
 import Creators from './pages/Creators'
@@ -21,4 +22,3 @@ function App() {
 }
 
 export default App
-
