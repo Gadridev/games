@@ -12,7 +12,6 @@ import TrendingSection from "../sections/TrendingSection";
 import SpotlightSection from "../sections/SpotlightSection";
 import TopRatedSection from "../sections/TopRatedSection";
 import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
 
 function HomePage() {
     const [trending, setTrending] = useState([]);

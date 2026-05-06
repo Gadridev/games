@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "../styles/spotlight.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Spotlight({ games }) {
   const [hovered, setHovered] = useState(false);
+  const navigate=useNavigate()
   const label = "SPOTLIGHT";
 
   const game = {
@@ -100,6 +102,7 @@ export default function Spotlight({ games }) {
             className={`creator-btn${hovered ? " hovered" : ""}`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            onClick={() => navigate(`/games/${games.id}`)}
           >
             {creator.buttonLabel}
           </button>

@@ -20,14 +20,12 @@
   margin-top: 6px;
 }
 
-/* GRID */
 .creators-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* CARD */
 .creator-card {
   position: relative;
   height: 260px;
@@ -37,7 +35,6 @@
   display: block;
 }
 
-/* BACKGROUND IMAGE */
 .creator-bg {
   position: absolute;
   inset: 0;
@@ -47,7 +44,6 @@
   transition: transform 0.4s ease;
 }
 
-/* DARK OVERLAY */
 .creator-overlay {
   position: absolute;
   inset: 0;
@@ -59,7 +55,6 @@
   );
 }
 
-/* CONTENT */
 .creator-content {
   position: absolute;
   bottom: 16px;
@@ -68,7 +63,6 @@
   z-index: 2;
 }
 
-/* ROLE (yellow small text) */
 .creator-role {
   font-size: 10px;
   color: var(--amber);
@@ -76,7 +70,6 @@
   text-transform: uppercase;
 }
 
-/* NAME */
 .creator-content h3 {
   font-size: 16px;
   color: var(--ice);
@@ -84,7 +77,6 @@
   font-weight: 600;
 }
 
-/* HOVER EFFECT */
 .creator-card:hover .creator-bg {
   transform: scale(1.1);
 }

@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
+import "../styles/trendingStyle.css"
 
 function GameCard({ game, index }) {
+    const navigate=useNavigate()
   const isFeatured = index === 0;
   const rank = String(index + 1).padStart(2, "0");
   
@@ -11,7 +14,7 @@ function GameCard({ game, index }) {
 
   console.log(isFeatured,game.genres[0])
   return (
-    <div className={`game-card ${isFeatured ? "game-card--featured" : ""}`}>
+    <div className={`game-card ${isFeatured ? "game-card--featured" : ""}`} onClick={() => navigate(`/games/${game.id}`)}> 
       <img
         src={game.background_image || "https://via.placeholder.com/400x300"}
         alt={game.name}
