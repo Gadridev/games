@@ -18,7 +18,7 @@ function Navbar() {
                     maxWidth: "1440px",
                     margin: "0 auto",
                     padding: "0 32px",
-                    height: "60px",
+                    height: "70px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
@@ -35,6 +35,7 @@ function Navbar() {
                             alignItems: "baseline",
                             gap: "4px"
                         }}
+                        onClick={() => navigate("/")}
                     >
                         <span
                             className="bebas"
@@ -42,14 +43,12 @@ function Navbar() {
                         >
                             GAME
                         </span>
-
                         <span
                             className="bebas"
                             style={{ fontSize: "23px", color: "var(--ice)", letterSpacing: "3px" }}
                         >
                             EXPLORER
                         </span>
-
                         <span
                             style={{
                                 width: "6px",
@@ -144,4 +143,5 @@ function Navbar() {
     );
 }
 
+export default Navbar;
 export default Navbar;

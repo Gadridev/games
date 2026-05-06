@@ -30,11 +30,57 @@ body::before {
   z-index: 9999;
 }
 :root {
-  --ink: #0a0c10;
-  --ink2: #111418;
-  --ice: #f0f3f8;
-  --fog: #8e9aaf;
   --amber: #f5a623;
-  --border: #1f2329;
-  --border2: #2a2f38;
+  --ice: #ffffff;
+  --fog: #888888;
+  --ink: #0b0f14;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.bebas {
+  font-family: 'Bebas Neue', 'Inter', sans-serif;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.nav-pill {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #ccc;
+  transition: all 0.2s;
+  border-radius: 30px;
+}
+
+.nav-pill:hover {
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.1);
+}
+
+.nav-pill.on {
+  color: #f5a623;
+}
+
+.srch {
+  background: #11161c;
+  border: none;
+  padding: 8px 12px 8px 32px;
+  border-radius: 30px;
+  color: white;
+  font-size: 12px;
+  width: 180px;
+  outline: none;
+}
+
+.srch::placeholder {
+  color: #555;
+  font-size: 11px;
+  letter-spacing: 1px;
 }
