@@ -4,7 +4,7 @@ import Games from './pages/Games'
 import GameDetail from './pages/GameDetail'
 import './App.css'
 import Creators from './pages/Creators'
-import CreatorDetails from './pages/CreatorDetails'
+import CreatorDetail from './pages/CreatorDetails'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/games" element={<Games />} />
         <Route path="/creators" element={<Creators />} />
         <Route path="/games/:game_id" element={<GameDetail />} />
-        <Route path="/creator/:creatorId" element={<CreatorDetails />} />
+        <Route path="/creator/:creatorId" element={<CreatorDetail />} />
       </Routes>
     </div>
   )

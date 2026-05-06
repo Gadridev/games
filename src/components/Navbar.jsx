@@ -1,5 +1,9 @@
 "../styles/HeroSection.css"
+
+import { useNavigate } from "react-router-dom"
+
 function Navbar() {
+    const navigate=useNavigate()
     return (
         <nav id="navbar">
             <div
@@ -54,13 +58,13 @@ function Navbar() {
                     </div>
 
                     <div style={{ display: "flex", gap: "4px" }} className="hide-m">
-                        <span className="nav-pill on" >
+                        <span className="nav-pill on" onClick={() => navigate("/")}>
                             Home
                         </span>
-                        <span className="nav-pill" >
+                        <span className="nav-pill"  onClick={() => navigate("/games")}>
                             Games
                         </span>
-                        <span className="nav-pill" >
+                        <span className="nav-pill" onClick={() => navigate("/creators")}>
                             Creators
                         </span>
                     </div>
