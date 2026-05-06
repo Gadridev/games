@@ -1,7 +1,16 @@
-"../styles/HeroSection.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom";
+
 function Navbar() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const isActive = (path) => {
+        if (path === "/" && location.pathname === "/") return true;
+        if (path === "/games" && location.pathname === "/games") return true;
+        if (path === "/creators" && location.pathname === "/games/developers-team") return true;
+        return false;
+    };
+
     return (
         <nav id="navbar">
             <div
@@ -17,8 +26,9 @@ function Navbar() {
                 }}
             >
                 <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-
+                   
                     <div
+                        onClick={() => navigate("/")}
                         style={{
                             cursor: "pointer",
                             display: "flex",
@@ -55,24 +65,35 @@ function Navbar() {
                         ></span>
                     </div>
 
+                    
                     <div style={{ display: "flex", gap: "4px" }} className="hide-m">
-                        <span className="nav-pill on" >
-                            Home
+                        <span 
+                            className={`nav-pill ${isActive("/") ? "active" : ""}`}
+                            onClick={() => navigate("/")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            HOME
                         </span>
-                        <span className="nav-pill"  >
-                            Games
+                        <span 
+                            className={`nav-pill ${isActive("/games") ? "active" : ""}`}
+                            onClick={() => navigate("/games")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            GAMES
                         </span>
-                        <span className="nav-pill" onClick={()=>navigate('/games/developers-team')} style={{ cursor: "pointer" }}>
-                            Creators
+                        <span 
+                            className={`nav-pill ${isActive("/creators") ? "active" : ""}`}
+                            onClick={() => navigate("/games/developers-team")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            CREATORS
                         </span>
                     </div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-
                     <div style={{ position: "relative" }}>
                         <input className="srch" placeholder="SEARCH..." />
-
                         <svg
                             style={{
                                 position: "absolute",
@@ -119,7 +140,7 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

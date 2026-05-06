@@ -29,3 +29,12 @@ body::before {
   pointer-events: none;
   z-index: 9999;
 }
+:root {
+  --ink: #0a0c10;
+  --ink2: #111418;
+  --ice: #f0f3f8;
+  --fog: #8e9aaf;
+  --amber: #f5a623;
+  --border: #1f2329;
+  --border2: #2a2f38;
+}
