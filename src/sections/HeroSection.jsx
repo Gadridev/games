@@ -18,7 +18,7 @@ function HeroSection({ game }) {
       style={{ backgroundImage: `url(${game.background_image})` }}
     >
       <div className="hero-overlay">
-        <div className="hero-content">
+        <div className="heros-content">
           <span className="badge">TOP RATED</span>
 
           <h1>{game.name}</h1>
