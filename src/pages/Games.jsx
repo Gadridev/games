@@ -2,7 +2,6 @@ import  { useState, useEffect } from "react";
 import GamesFilter from "../components/GamesFilter";
 import GameCard from "../components/GameAffichage";
 import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
 import "../styles/GameListe.css";
 
 function Games() {
@@ -35,7 +34,6 @@ function Games() {
   if (loading) {
     return (
       <>
-        <Navbar />
         <Loader text="LOADING GAMES" />
       </>
     );
@@ -43,7 +41,6 @@ function Games() {
 
   return (
     <>
-      <Navbar />
       <div className="games-page">
         <div className="page-header">
           <h1>

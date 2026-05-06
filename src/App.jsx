@@ -5,10 +5,16 @@ import Games from './pages/Games'
 import GameDetail from './pages/GameDetail'
 import Creators from './pages/Creators'
 import CreatorDetails from './pages/CreatorDetails'
+import Navbar from './components/Navbar'
 
 function App() {
+
+  
+
+
   return (
     <div className="app-content">
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games" element={<Games />} />
