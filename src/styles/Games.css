@@ -1,0 +1,254 @@
+
+
+.gcard {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.gcard:hover {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(245, 166, 35, 0.15);
+}
+
+.gcard-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.gcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.gcard:hover .gcard-img img {
+  transform: scale(1.06);
+}
+
+.gcard-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 9, 12, 0.95) 0%,
+    rgba(8, 9, 12, 0.3) 55%,
+    transparent 100%
+  );
+}
+
+.gcard-action {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: rgba(8, 9, 12, 0.5);
+}
+
+.gcard:hover .gcard-action {
+  opacity: 1;
+}
+
+.action-pill {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  background: var(--amber);
+  color: var(--ink);
+  padding: 8px 18px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.badge-score {
+  background: var(--amber);
+  color: var(--ink);
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.badge-genre {
+  background: rgba(232, 237, 245, 0.06);
+  border: 1px solid var(--border);
+  color: var(--fog);
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+/* TopRatedSection.css */
+
+.srow {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.srow::-webkit-scrollbar {
+  height: 2px;
+}
+
+.srow > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.ruled-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.ruled-header .rule {
+  margin: 0;
+}
+
+.sec-label {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--amber);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec-label::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: var(--amber);
+}
+
+.rule {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+
+
+.gcard {
+  background: var(--ink2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.gcard:hover {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(245, 166, 35, 0.15);
+}
+
+.gcard-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.gcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.gcard:hover .gcard-img img {
+  transform: scale(1.06);
+}
+
+.gcard-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 9, 12, 0.95) 0%,
+    rgba(8, 9, 12, 0.3) 55%,
+    transparent 100%
+  );
+}
+
+.gcard-action {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: rgba(8, 9, 12, 0.5);
+}
+
+.gcard:hover .gcard-action {
+  opacity: 1;
+}
+
+.action-pill {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  background: var(--amber);
+  color: var(--ink);
+  padding: 8px 18px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.badge-score {
+  background: var(--amber);
+  color: var(--ink);
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.badge-genre {
+  background: rgba(232, 237, 245, 0.06);
+  border: 1px solid var(--border);
+  color: var(--fog);
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.mono {
+  font-family: "Space Mono", monospace;
+}

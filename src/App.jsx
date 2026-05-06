@@ -1,13 +1,24 @@
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+// import Games from './pages/Games'
+// import GameDetail from './pages/GameDetail'
+import GameDevelopers from './pages/GameDevelopers'
+import './App.css'
 
 function App() {
-
-
   return (
-    <>
-     <HomePage/>
-    </>
+    <div className="app-content">
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/games" element={<Games />} /> */}
+      {/* <Route path="/games/:game_id" element={<GameDetail />} /> */}
+        <Route path="/games/developers-team" element={<GameDevelopers />} /> 
+        
+      </Routes>
+    </div>
   )
 }
 
 export default App
+
