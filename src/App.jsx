@@ -1,23 +1,21 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Games from './pages/Games'
-import GameDetail from './pages/GameDetail'
-import GameDevelopers from './pages/GameDevelopers'
+// import GameDetail from './pages/GameDetail'
+// import GameDevelopers from './pages/GameDevelopers'
 import './App.css'
 
 function App() {
   return (
     <div className="app-content">
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/games/:game_id" element={<GameDetail />} />
-        <Route path="/games/:game_id/developers-team" element={<GameDevelopers />} />
+        {/* <Route path="/games/:game_id" element={<GameDetail />} /> */}
+        {/* <Route path="/games/:game_id/developers-team" element={<GameDevelopers />} /> */}
       </Routes>
     </div>
   )
 }
 
 export default App
-

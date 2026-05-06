@@ -1,5 +1,8 @@
-"../styles/HeroSection.css"
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+    const navigate = useNavigate();
+
     return (
         <nav id="navbar">
             <div
@@ -7,7 +10,7 @@ function Navbar() {
                     maxWidth: "1440px",
                     margin: "0 auto",
                     padding: "0 32px",
-                    height: "60px",
+                    height: "70px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
@@ -15,7 +18,6 @@ function Navbar() {
                 }}
             >
                 <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-
                     <div
                         style={{
                             cursor: "pointer",
@@ -23,6 +25,7 @@ function Navbar() {
                             alignItems: "baseline",
                             gap: "4px"
                         }}
+                        onClick={() => navigate("/")}
                     >
                         <span
                             className="bebas"
@@ -30,14 +33,12 @@ function Navbar() {
                         >
                             GAME
                         </span>
-
                         <span
                             className="bebas"
                             style={{ fontSize: "23px", color: "var(--ice)", letterSpacing: "3px" }}
                         >
                             EXPLORER
                         </span>
-
                         <span
                             style={{
                                 width: "6px",
@@ -54,23 +55,29 @@ function Navbar() {
                     </div>
 
                     <div style={{ display: "flex", gap: "4px" }} className="hide-m">
-                        <span className="nav-pill on" >
+                        <span 
+                            className="nav-pill on"
+                            onClick={() => navigate("/")}
+                            style={{ cursor: "pointer" }}
+                        >
                             Home
                         </span>
-                        <span className="nav-pill" >
+                        <span 
+                            className="nav-pill"
+                            onClick={() => navigate("/games")}
+                            style={{ cursor: "pointer" }}
+                        >
                             Games
                         </span>
-                        <span className="nav-pill" >
+                        <span className="nav-pill" style={{ cursor: "pointer" }}>
                             Creators
                         </span>
                     </div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-
                     <div style={{ position: "relative" }}>
                         <input className="srch" placeholder="SEARCH..." />
-
                         <svg
                             style={{
                                 position: "absolute",
@@ -120,4 +127,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
