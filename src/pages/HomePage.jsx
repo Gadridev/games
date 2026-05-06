@@ -38,13 +38,13 @@ function HomePage() {
         loadData();
     }, []);
 
+    
 
     if (loading) return <Loader />;
 
 
     return (
         <>
-            <Navbar />
             <HeroSection game={topRated[3]} />
             <TrendingSection games={trending} />
             <TopRatedSection games={topRated} />

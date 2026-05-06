@@ -1,7 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const isActive = (path) => {
+        if (path === "/" && location.pathname === "/") return true;
+        if (path === "/games" && location.pathname === "/games") return true;
+        if (path === "/creators" && location.pathname === "/creators") return true;
+        return false;
+    };
 
     return (
         <nav id="navbar">
@@ -18,14 +26,16 @@ function Navbar() {
                 }}
             >
                 <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
+                   
                     <div
+                        onClick={() => navigate("/")}
                         style={{
                             cursor: "pointer",
                             display: "flex",
                             alignItems: "baseline",
                             gap: "4px"
                         }}
-                        onClick={() => navigate("/")}
+                        
                     >
                         <span
                             className="bebas"
@@ -54,23 +64,29 @@ function Navbar() {
                         ></span>
                     </div>
 
+                    
                     <div style={{ display: "flex", gap: "4px" }} className="hide-m">
                         <span 
-                            className="nav-pill on"
+                            className={`nav-pill ${isActive("/") ? "active" : ""}`}
                             onClick={() => navigate("/")}
                             style={{ cursor: "pointer" }}
                         >
-                            Home
+                            HOME
                         </span>
                         <span 
-                            className="nav-pill"
+                            className={`nav-pill ${isActive("/games") ? "active" : ""}`}
                             onClick={() => navigate("/games")}
                             style={{ cursor: "pointer" }}
                         >
-                            Games
+                            GAMES
                         </span>
-                        <span className="nav-pill" style={{ cursor: "pointer" }}>
-                            Creators
+                        <span 
+                            className={`nav-pill ${isActive("/creators") ? "active" : ""}`}
+                            onClick={() => navigate("/creators")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            
+                            CREATORS
                         </span>
                     </div>
                 </div>
@@ -124,7 +140,7 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
 export default Navbar;
