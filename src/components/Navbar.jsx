@@ -1,9 +1,16 @@
-"../styles/HeroSection.css"
-
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
-    const navigate=useNavigate()
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const isActive = (path) => {
+        if (path === "/" && location.pathname === "/") return true;
+        if (path === "/games" && location.pathname === "/games") return true;
+        if (path === "/creators" && location.pathname === "/creators") return true;
+        return false;
+    };
+
     return (
         <nav id="navbar">
             <div
@@ -11,7 +18,7 @@ function Navbar() {
                     maxWidth: "1440px",
                     margin: "0 auto",
                     padding: "0 32px",
-                    height: "60px",
+                    height: "70px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
@@ -19,14 +26,16 @@ function Navbar() {
                 }}
             >
                 <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-
+                   
                     <div
+                        onClick={() => navigate("/")}
                         style={{
                             cursor: "pointer",
                             display: "flex",
                             alignItems: "baseline",
                             gap: "4px"
                         }}
+                        
                     >
                         <span
                             className="bebas"
@@ -34,14 +43,12 @@ function Navbar() {
                         >
                             GAME
                         </span>
-
                         <span
                             className="bebas"
                             style={{ fontSize: "23px", color: "var(--ice)", letterSpacing: "3px" }}
                         >
                             EXPLORER
                         </span>
-
                         <span
                             style={{
                                 width: "6px",
@@ -57,24 +64,36 @@ function Navbar() {
                         ></span>
                     </div>
 
+                    
                     <div style={{ display: "flex", gap: "4px" }} className="hide-m">
-                        <span className="nav-pill on" onClick={() => navigate("/")}>
-                            Home
+                        <span 
+                            className={`nav-pill ${isActive("/") ? "active" : ""}`}
+                            onClick={() => navigate("/")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            HOME
                         </span>
-                        <span className="nav-pill"  onClick={() => navigate("/games")}>
-                            Games
+                        <span 
+                            className={`nav-pill ${isActive("/games") ? "active" : ""}`}
+                            onClick={() => navigate("/games")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            GAMES
                         </span>
-                        <span className="nav-pill" onClick={() => navigate("/creators")}>
-                            Creators
+                        <span 
+                            className={`nav-pill ${isActive("/creators") ? "active" : ""}`}
+                            onClick={() => navigate("/creators")}
+                            style={{ cursor: "pointer" }}
+                        >
+                            
+                            CREATORS
                         </span>
                     </div>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-
                     <div style={{ position: "relative" }}>
                         <input className="srch" placeholder="SEARCH..." />
-
                         <svg
                             style={{
                                 position: "absolute",
@@ -121,7 +140,7 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

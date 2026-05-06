@@ -58,3 +58,9 @@ export async function fetchGamesByCreator(id) {
   const data = await res.json();
   return data.results;
 }
+export async function fetchCreators (){
+  const res = await axios.get(
+   `${BASE_URL}/creators?key=${API_KEY}&page_size=10`
+  )
+  return res.data.results;
+}

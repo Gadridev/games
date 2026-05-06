@@ -36,7 +36,7 @@
   align-items: center;
 }
 
-.hero-content {
+.heros-content {
   color: white;
   max-width: 600px;
   margin-left: 80px;
@@ -50,7 +50,7 @@
   font-weight: bold;
 }
 
-.hero-content h1 {
+.heros-content h1 {
   font-size: 64px;
   margin: 20px 0;
   line-height: 1.1;
@@ -84,11 +84,11 @@
 }
 
 @media (max-width: 768px) {
-  .hero-content {
+  .heros-content {
     margin-left: 20px;
   }
 
-  .hero-content h1 {
+  .heros-content h1 {
     font-size: 40px;
   }
 

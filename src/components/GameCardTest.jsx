@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/Games.css';
 
-const GameCard = ({ game, height = 220, onViewDetails }) => {
+const GameCard = ({ game, height = 220 }) => {
+  const navigate=useNavigate()
   const year = game.released 
     ? new Date(game.released).getFullYear() 
     : "N/A";
@@ -16,7 +18,7 @@ const GameCard = ({ game, height = 220, onViewDetails }) => {
   return (
     <div 
       className="gcard" 
-      onClick={() => onViewDetails(game.id)}
+      onClick={() => navigate(`/games/${game.id}`)}
       style={{ cursor: "pointer" }}
     >
       <div className="gcard-img" style={{ height: `${height}px` }}>

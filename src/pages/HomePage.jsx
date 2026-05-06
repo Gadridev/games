@@ -12,7 +12,6 @@ import TrendingSection from "../sections/TrendingSection";
 import SpotlightSection from "../sections/SpotlightSection";
 import TopRatedSection from "../sections/TopRatedSection";
 import Loader from "../components/Loader";
-import Navbar from "../components/Navbar";
 
 function HomePage() {
     const [trending, setTrending] = useState([]);
@@ -38,13 +37,13 @@ function HomePage() {
         loadData();
     }, []);
 
+    
 
     if (loading) return <Loader />;
 
 
     return (
         <>
-            <Navbar />
             <HeroSection game={topRated[3]} />
             <TrendingSection games={trending} />
             <TopRatedSection games={topRated} />

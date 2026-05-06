@@ -1,0 +1,86 @@
+.creators-page {
+  padding: 40px 32px;
+}
+
+.creators-header {
+  margin-bottom: 32px;
+}
+
+.creators-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--ice);
+  letter-spacing: 2px;
+}
+
+.creators-sub {
+  font-size: 12px;
+  color: var(--fog);
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.creator-card {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+  text-decoration: none;
+  display: block;
+}
+
+.creator-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(40%);
+  transition: transform 0.4s ease;
+}
+
+.creator-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 20%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent
+  );
+}
+
+.creator-content {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.creator-role {
+  font-size: 10px;
+  color: var(--amber);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.creator-content h3 {
+  font-size: 16px;
+  color: var(--ice);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.creator-card:hover .creator-bg {
+  transform: scale(1.1);
+}
+
+.creator-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
