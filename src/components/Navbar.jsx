@@ -7,7 +7,7 @@ function Navbar() {
     const isActive = (path) => {
         if (path === "/" && location.pathname === "/") return true;
         if (path === "/games" && location.pathname === "/games") return true;
-        if (path === "/creators" && location.pathname === "/games/developers-team") return true;
+        if (path === "/creators" && location.pathname === "/creators") return true;
         return false;
     };
 
@@ -35,7 +35,7 @@ function Navbar() {
                             alignItems: "baseline",
                             gap: "4px"
                         }}
-                        onClick={() => navigate("/")}
+                        
                     >
                         <span
                             className="bebas"
