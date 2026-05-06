@@ -6,7 +6,7 @@ export function CreatorCard({ creator }) {
   console.log(creator)
 
   return (
-    <Link to={`/creators/${creator.id}`} className="creator-card">
+    <Link to={`/creator/${creator.id}`} className="creator-card">
       <div
         className="creator-bg"
         style={{

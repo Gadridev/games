@@ -46,8 +46,19 @@ export const fetchGameDevelopers = async (id) => {
   const game = await fetchGameById(id);
   return game.developers || [];
 };
+export async function fetchCreatorById(id) {
+  const res = await fetch(`${BASE_URL}/creators/${id}?key=${API_KEY}`);
+  if (!res.ok) throw new Error("Failed to fetch creator");
+  return res.json();
+}
 
-export const fetchCreators =async()=>{
+export async function fetchGamesByCreator(id) {
+  const res = await fetch(`${BASE_URL}/games?key=${API_KEY}&creators=${id}&page_size=10`);
+  if (!res.ok) throw new Error("Failed to fetch creator games");
+  const data = await res.json();
+  return data.results;
+}
+export async function fetchCreators (){
   const res = await axios.get(
    `${BASE_URL}/creators?key=${API_KEY}&page_size=10`
   )
