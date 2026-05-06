@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> 2ed35eb (solve conflict in app.js)
+
 
 function GameCard({ game }) {
   return (

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-=======
 import  { useEffect, useState } from "react";
->>>>>>> 2ed35eb (solve conflict in app.js)
 import GamesFilter from "./GamesFilter";
 import GameCard from "./GameAffichage";
 
