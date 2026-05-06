@@ -35,7 +35,6 @@ function Games() {
   if (loading) {
     return (
       <>
-        <Navbar />
         <Loader text="LOADING GAMES" />
       </>
     );
@@ -43,7 +42,6 @@ function Games() {
 
   return (
     <>
-      <Navbar />
       <div className="games-page">
         <div className="page-header">
           <h1>
