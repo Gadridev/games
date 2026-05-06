@@ -49,7 +49,7 @@ export const fetchGameDevelopers = async (id) => {
 
 export const fetchCreators =async()=>{
   const res = await axios.get(
-   `${BASE_URL}/creators?key=${API_KEY}&page_size=20`
+   `${BASE_URL}/creators?key=${API_KEY}&page_size=10`
   )
   return res.data.results;
 }

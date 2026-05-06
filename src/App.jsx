@@ -1,20 +1,26 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import GameDevelopers from './pages/GameDevelopers'
-import Navbar from './components/Navbar'
+import Games from './pages/Games'
+import GameDetail from './pages/GameDetail'
 import './App.css'
+import Creators from './pages/Creators'
+import CreatorDetails from './pages/CreatorDetails'
+import Navbar from './components/Navbar'
 
 function App() {
-  const location = useLocation()
+
   
-  const hideNavbar = location.pathname === "/"
+
 
   return (
     <div className="app-content">
-      {!hideNavbar && <Navbar />} 
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/games/developers-team" element={<GameDevelopers />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/creators" element={<Creators />} />
+        <Route path="/games/:game_id" element={<GameDetail />} />
+        <Route path="/creator/:creatorId" element={<CreatorDetails />} />
       </Routes>
     </div>
   )

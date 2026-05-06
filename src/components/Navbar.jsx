@@ -83,9 +83,10 @@ function Navbar() {
                         </span>
                         <span 
                             className={`nav-pill ${isActive("/creators") ? "active" : ""}`}
-                            onClick={() => navigate("/games/developers-team")}
+                            onClick={() => navigate("/creators")}
                             style={{ cursor: "pointer" }}
                         >
+                            
                             CREATORS
                         </span>
                     </div>

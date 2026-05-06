@@ -3,13 +3,14 @@ import "../styles/CreatorStyle.css";
 
 export function CreatorCard({ creator }) {
   const mainRole = creator.positions?.[0]?.name || "CREATOR";
+  console.log(creator)
 
   return (
     <Link to={`/creators/${creator.id}`} className="creator-card">
       <div
         className="creator-bg"
         style={{
-          backgroundImage: `url(${creator.image_background || "https://placehold.co/400x300"})`
+          backgroundImage: `url(${creator.image || "https://placehold.co/400x300"})`
         }}
       />
       <div className="creator-overlay" />

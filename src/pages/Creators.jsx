@@ -4,7 +4,7 @@ import { CreatorCard } from "../components/CreatorCard";
 import Loader from "../components/Loader";         // ← zid loader
 import "../styles/CreatorStyle.css";               // ← zid CSS
 
-export default function GameDevelopers() {
+export default function Creators() {
     const [creators, setcreators] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,7 +29,10 @@ export default function GameDevelopers() {
     return (
         <div className="creators-page">
             <div className="creators-header">
-                <h1 className="creators-title">GAME CREATORS</h1>
+                <h1 className="creators-title">
+                    GAME 
+                    <br/>
+                    <span style={{color:"orange"}}>CREATORS</span></h1>
                 <p className="creators-sub">The visionaries behind your favorite worlds</p>
             </div>
             <div className="creators-grid">
