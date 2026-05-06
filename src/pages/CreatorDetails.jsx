@@ -9,7 +9,7 @@ import { fetchCreatorById, fetchGamesByCreator } from "../api/homeApi";
 
 
 function CreatorDetail() {
-  const { creator_id } = useParams();
+  const { creatorId } = useParams();
   const navigate       = useNavigate();
 
   const [creator, setCreator] = useState(null);
@@ -20,8 +20,8 @@ function CreatorDetail() {
     const load = async () => {
       try {
         const [creatorData, gamesData] = await Promise.all([
-          fetchCreatorById(creator_id),
-          fetchGamesByCreator(creator_id),
+          fetchCreatorById(creatorId),
+          fetchGamesByCreator(creatorId),
         ]);
         setCreator(creatorData);
         setGames(gamesData);
@@ -33,7 +33,7 @@ function CreatorDetail() {
     };
 
     load();
-  }, [creator_id]);
+  }, [creatorId]);
 
   if (loading) return <Loader />;
   if (!creator) return <p>Creator not found</p>;
