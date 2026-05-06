@@ -229,7 +229,6 @@
     background: #c0392b;
   }
 
-  /* Right sidebar */
   .right {
     padding: 24px 22px;
     display: flex;
@@ -260,7 +259,6 @@
     font-family: var(--font-m);
   }
 
-  /* Platforms */
   .platforms-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -277,13 +275,11 @@
     text-transform: uppercase;
   }
 
-  /* Divider */
   .divider {
     height: 1px;
     background: var(--border);
   }
 
-  /* Stores */
   .stores-wrap {
     display: flex;
     flex-direction: column;
@@ -308,7 +304,6 @@
     letter-spacing: 0.1em;
   }
 
-  /* Added stats */
   .stats-mini {
     display: grid;
     grid-template-columns: 1fr 1fr;
