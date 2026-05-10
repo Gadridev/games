@@ -19,7 +19,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  HomePage["HomePage"] -->|game = topRated[3]| HeroSection["HeroSection"]
+  HomePage["HomePage"] -->|game = topRated index 3| HeroSection["HeroSection"]
   HomePage -->|games = trending| TrendingSection["TrendingSection"]
   HomePage -->|games = topRated| TopRatedSection["TopRatedSection"]
   HomePage -->|games = spotlight| SpotlightSection["SpotlightSection"]
@@ -71,7 +71,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-  Parent["Parent Component"] -->|props ->| Child["Child Component"]
-  Child -->|event callback ->| Parent
+  Parent["Parent Component"] -->|props| Child["Child Component"]
+  Child -->|callback event| Parent
 ```
 
