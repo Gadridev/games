@@ -7,6 +7,7 @@ import Creators from './pages/Creators'
 
 import Navbar from './components/Navbar'
 import CreatorDetail from './pages/CreatorDetails'
+import GameDevelopers from './pages/GameDevelopers'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/creators" element={<Creators />} />
         <Route path="/games/:game_id" element={<GameDetail />} />
         <Route path="/creator/:creatorId" element={<CreatorDetail />} />
+        <Route path="/games/:gameId/team" element={<GameDevelopers />} />
       </Routes>
     </div>
   )

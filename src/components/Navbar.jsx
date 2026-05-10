@@ -92,30 +92,7 @@ function Navbar() {
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                    <div style={{ position: "relative" }}>
-                        <input className="srch" placeholder="SEARCH..." />
-                        <svg
-                            style={{
-                                position: "absolute",
-                                left: "10px",
-                                top: "50%",
-                                transform: "translateY(-50%)",
-                                color: "var(--fog)"
-                            }}
-                            width="14"
-                            height="14"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                            ></path>
-                        </svg>
-                    </div>
+                   
 
                     <div
                         style={{

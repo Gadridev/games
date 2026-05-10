@@ -9,8 +9,7 @@ function HeroSection({ game }) {
     { value: `${game.playtime}H`, label: "AVG PLAYTIME" },
     { value: `${game.reviews_count.toLocaleString()}`, label: "REVIEWS" },
   ];
-
-  if (!game) return null;
+  if (!game) return null; 
 
   return (
     <section
@@ -39,7 +38,7 @@ function HeroSection({ game }) {
               View Details
             </button>
 
-            <button className="secondary">Browse Games</button>
+            <button className="secondary" onClick={()=>navigate(`/games/${game.id}/team`)}>Browse Games</button>
           </div>
           <div
             style={{

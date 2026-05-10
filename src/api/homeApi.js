@@ -24,10 +24,11 @@ export const fetchSpotlightGame = async () => {
   return res.data;
 };
 
-export const fetchGames = async (page = 1, pageSize = 12, ordering = "-rating", search = "", genres = "") => {
+export const fetchGames = async (page = 1, pageSize = 20, ordering = "-added", search = "", genres = "") => {
+    console.log(genres)
   let url = `${BASE_URL}/games?key=${API_KEY}&page=${page}&page_size=${pageSize}&ordering=${ordering}`;
   if (search) url += `&search=${encodeURIComponent(search)}`;
-  if (genres) url += `&genres=${genres}`;
+  if (genres && genres !== "all") url += `&genres=${genres}`; 
   const res = await axios.get(url);
   return res.data;
 };
@@ -63,4 +64,15 @@ export async function fetchCreators (){
    `${BASE_URL}/creators?key=${API_KEY}&page_size=10`
   )
   return res.data.results;
+}
+export async function fetchGameDetails(id) {
+  const res = await fetch(
+    `https://api.rawg.io/api/games/${id}?key=${API_KEY}`
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch game details");
+  }
+
+  return res.json();
 }

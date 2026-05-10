@@ -37,7 +37,6 @@ function HomePage() {
         loadData();
     }, []);
 
-    
 
     if (loading) return <Loader />;
 
