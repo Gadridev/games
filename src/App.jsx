@@ -10,10 +10,6 @@ import CreatorDetail from './pages/CreatorDetails'
 import GameDevelopers from './pages/GameDevelopers'
 
 function App() {
-
-  
-
-
   return (
     <div className="app-content">
       <Navbar/>
